@@ -15,7 +15,12 @@ get '/bea' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red; width: 454px'>
-     <img src='http://bit.ly/1eze8aE'>
-   </div>"
+  @names = ["Joao", "Bea"].sample
+  erb(:index)
 end
+
+get '/erb' do
+  erb "Hi there erb <%=2 + 2 %>!"
+end
+
+#server returns the content between do and end.
