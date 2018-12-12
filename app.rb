@@ -6,5 +6,10 @@ end
 
 
 get '/secret' do
-  'This is second route!'
+  'This is second route!!!!!!'
+end
+
+
+get '/bea' do
+  'My name is bea'
 end
