@@ -14,10 +14,18 @@ get '/bea' do
   'My name is bea'
 end
 
-get '/cat' do
-  @names = ["Joao", "Bea"].sample
+
+get '/random-cat' do
+  @name = ["Joao", "Bea"].sample
   erb(:index)
 end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end
+
 
 get '/erb' do
   erb "Hi there erb <%=2 + 2 %>!"
